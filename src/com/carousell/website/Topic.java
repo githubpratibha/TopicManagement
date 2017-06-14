@@ -1,6 +1,6 @@
 package com.carousell.website;
 
-public class Topic {
+public class Topic implements Comparable<Topic> {
 
 	int id;
 	String topicName;
@@ -49,5 +49,9 @@ public class Topic {
 
 	public void setDownVotes(int downVotes) {
 		this.downVotes = downVotes;
+	}
+
+	public int compareTo(Topic topic) {
+		return topic.upVotes - this.upVotes;
 	}
 }

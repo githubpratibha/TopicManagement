@@ -1,6 +1,7 @@
 package com.carousell.website;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,7 +36,16 @@ public class TopicService {
 
 	public List<Topic> getAllTopics() {
 		List<Topic> topics = new ArrayList<Topic>(topicIdMap.values());
-		return topics;
+		Collections.sort(topics);
+		int fromIndex = 1;
+		int toIndex = topics.size();
+		if (topics.size() > 20)
+			toIndex = 20;
+
+		if (fromIndex == toIndex)
+			return topics;
+		else
+			return topics.subList(0, toIndex);
 	}
 
 	public static HashMap<Integer, Topic> getTopicIdMap() {
