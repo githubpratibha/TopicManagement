@@ -41,4 +41,26 @@ public class TopicService {
 	public static HashMap<Integer, Topic> getTopicIdMap() {
 		return topicIdMap;
 	}
+
+	public Topic addTopic(Topic Topic) {
+		Topic.setId(getMaxId() + 1);
+		topicIdMap.put(Topic.getId(), Topic);
+		return Topic;
+	}
+
+	public Topic updateTopic(Topic topic) {
+		if (topic.getId() <= 0)
+			return null;
+		topicIdMap.put(topic.getId(), topic);
+		return topic;
+	}
+
+	public static int getMaxId() {
+		int max = 0;
+		for (int id : topicIdMap.keySet()) {
+			if (max <= id)
+				max = id;
+		}
+		return max;
+	}
 }
