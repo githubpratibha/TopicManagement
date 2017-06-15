@@ -1,36 +1,42 @@
-#Title 
-Digg / Reddit clone with upvote and downvotes Description: A website will allows users to contribute topics and upvote or downvote these topics. Environment: JDK 1.8, Linux, Eclipse IDE, RESTful Webservices, Tomcat 8.x, Maven, AngularJS
+## Title
 
-#Explanation
+Digg / Reddit clone with upvote and downvotes Description.
 
-▪When you click on submit button on form, it actually calls POST operation to create new resource. 
+A website that allows users to contribute topics and upvote or downvote these topics. Environment: JDK 1.8, Linux, Eclipse IDE, RESTful Webservices, Tomcat 8.x, Maven, AngularJS
+
+## Explanation
+
+▪ When you click on submit button on form, it actually calls POST operation to create new resource. 
+
 ▪ Every time you submit data, it calls refereshTopicData( ) to refresh topic table below. 
-▪ When you call $http, you need to pass method type and URL, it will call it accordingly 
-▪ When you click on Like/DisLike button on form, it actually calls PUT operation to update existing resource and display. 
-▪ On successful operation of GET,PUT and POST topics are displayed on the basis of Likes(descending order) 
 
-GitHub Link : https://github.com/githubpratibha/TopicManagement
+▪ When you call $http, you need to pass method type and URL, it will call it accordingly.
+ 
+▪ When you click on Like/DisLike button on form, it actually calls PUT operation to update existing resource and display.
+ 
+▪ On successful operation of GET,PUT and POST topics are displayed on the basis of Likes(descending order). 
 
-
-#Steps To Run Application On Amazon AWS EC2:
+## Steps To Run Application On Amazon AWS EC2:
 
 URL To Access WebPage: http://54.152.42.70:8080/TopicManagementTest/
 
 URL To Access BackEnd: http://54.152.42.70:8080/TopicManagement/rest/topics
-	▪ Use REST Client to fire GET/PUT/POST requests
 
-#Steps To Run Application On Localhost:
+▪ Use REST Client to fire GET/PUT/POST requests
+
+## Steps To Run Application On Localhost
 
 ▪Right click on project -> run as -> run on server.Select apache tomcat and click on finish
 
 ▪Open index.html file in browser. You will see the web page.
+ 
  Index.html is present on this path : TopicManagement\WebContent\WEB-INF
 
 ▪ Hit Submit button to post topics
 
 ▪ Hit Like/DisLike button to cast your votes
 
-#check Get method for Rest API
+## check Get method for Rest API
 
 ▪Test your get method REST service URL :“ http://localhost:8080/TopicManagement/rest/topics” 
 
